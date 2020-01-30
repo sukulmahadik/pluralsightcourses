@@ -1,0 +1,64 @@
+Implementing Azure Data Lake Storage Gen2
+by Xavier Morera
+
+Demo: Creating an Azure Data Lake Gen2 Using Portal
+In this demo, please begin by creating a resource group from portal.azure.com. The next step is to create a storage account, the important step is to select StorageV2. If you wish, enable hierarchical namespace. Detailed steps included in the video.
+
+
+Demo:Creating and Deleting an Azure Data Lake Gen2 Using PowerShell
+Follow these steps to create a Data Lake using Powershell. You can use CloudShell.
+1. Create a resource group
+$resourceGroup = "storage-quickstart-resource-group" 
+$location = "westus2"
+New-AzureRmResourceGroup -Name $resourceGroup -Location $location
+
+2. Create a general-purpose v2 storage account
+Get-AzureRmLocation | select Location 
+$location = "westus2" 
+New-AzureRmStorageAccount -ResourceGroupName $resourceGroup -Name "storagequickstart" -Location $location -SkuName Standard_LRS -Kind StorageV2
+ 
+3. Clean up resources
+Remove-AzureRmResourceGroup -Name $resourceGroup
+
+
+Demo: Ingesting Data into ADLS Gen2 from AWS S3 using Azure Data Factory
+In this demo you will move data from S3 to Gen2 using ADF. Detailed instructions included in the video.
+
+
+Demo: Ingesting Data into ADLS Gen2 from AWS S3 using Azure Data Factory
+In this demo you will move data from Gen1 to Gen2 using ADF. Detailed instructions included in the video.
+
+
+Demo: Using the Azure Data Lake Store Gen2 REST API
+Detailed instructions on how to call the API are included in the video, including how to enable this capability. Here are the commands used:
+- Get an access token
+ACCESS_TOKEN=$(curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "client_id=$CLIENT_ID1&client_secret=$CLIENT_SECRET1&scope=https%3A%2F%2Fstorage.azure.com%2F.default&grant_type=client_credentials" "https://login.microsoftonline.com/$TENTANT_NAME/oauth2/v2.0/token" | jq -r '.access_token')
+
+- Make a call
+curl -H "x-ms-version: 2018-06-17" -H "Authorization: Bearer $ACCESS_TOKEN" "https://$STORAGE_ACCOUNT_NAME.dfs.core.windows.net/mydata?resource=filesystem&recursive=true" | jq "."
+
+
+Demo: Moving Data from Blobs to Azure Data Lake Store Gen2 Using distcp
+distcp is a commonly used command for Hadoop users. This is the format of the command to use:
+hadoop distcp wasb://<CONTAINER_NAME>@<STORAGE_ACCOUNT_NAME>.blob.core.windows.net/example/data/ abfs://<FILE_SYSTEM_NAME>@<STORAGE_ACCOUNT_NAME>.dfs.core.windows.net/myfolder
+
+
+Demo: Copying or Moving Data to Azure Data Lake Store Gen2 with AzCopy
+To move data using azcopy you need to set the keys first, and then execute
+set ACCOUNT_NAME=datalakesaps 
+set ACCOUNT_KEY=<key> 
+azcopy cp "files/*" "https://datalakesaps.dfs.core.windows.net/datalakegen2hdifs/datafromazcopy" --recursive=true
+
+
+Demo: Setting-up a Data Lake Store Gen2 Capable HDInsight Cluster
+In this demo you will create an HDInsight cluster, version 3.6 and up. Detailed instructions are included in the video.
+
+
+Demo: Running Spark Jobs with Data Stored in ADLS Gen2
+To run the Spark demo please upload CSV into the filesystem and run the following in Jupyter
+import pyspark
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+posts_df = spark.read.option('header', 'True').csv('abfs://datalakegen2hdifs@datalakesaps.dfs.core.windows.net/data/PostsCSV')
+posts_df.select('Id', 'Score', 'Title').show()
