@@ -1,0 +1,9 @@
+1- Sign up for an Azure account at: www.azure.com
+
+2- After signing into the portal, locate the New button as shown in the demo.
+
+3- Locate the SQL Data Warehouse link in the Data + Storage category as shown in the demo.
+
+4- Follow the new SQL DataWarehouse configuration blades as shown in the demo.
+
+Remember, Azure Data Warehouse charges by the hour so make sure to pause your warehouse once you're done playing with it!
