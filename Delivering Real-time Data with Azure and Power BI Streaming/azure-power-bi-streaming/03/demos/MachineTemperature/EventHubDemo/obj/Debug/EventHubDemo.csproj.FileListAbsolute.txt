@@ -1,0 +1,25 @@
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\EventHubDemo.exe.config
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\EventHubDemo.exe
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\EventHubDemo.pdb
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\FactoryFloor.dll
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\Microsoft.ServiceBus.dll
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\FactoryFloor.pdb
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\Microsoft.ServiceBus.xml
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\obj\Debug\EventHubDemo.csprojResolveAssemblyReference.cache
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\obj\Debug\EventHubDemo.exe
+C:\Users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\EventHubDemo\obj\Debug\EventHubDemo.pdb
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\EventHubDemo.exe.config
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\EventHubDemo.exe
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\EventHubDemo.pdb
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\FactoryFloor.dll
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\Microsoft.ServiceBus.dll
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\FactoryFloor.pdb
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\Microsoft.ServiceBus.xml
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\obj\Debug\EventHubDemo.csprojResolveAssemblyReference.cache
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\obj\Debug\EventHubDemo.csproj.CoreCompileInputs.cache
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\obj\Debug\EventHubDemo.exe
+C:\Users\warneradmin\source\repos\MachineTemperature\EventHubDemo\obj\Debug\EventHubDemo.pdb

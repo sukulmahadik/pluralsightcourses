@@ -1,0 +1,14 @@
+-- Pluralsight Course --------
+-- Querying Data with T-SQL --
+-- Module 9 - Wrapping Up ----
+------------------------------
+-- Ami Levin 2019 ------------
+------------------------------
+-- docs.microsoft.com/en-us/sql
+-- app.pluralsight.com/search/?q=sql%20server
+-- app.pluralsight.com/search/?q=SQL
+-- www.stackoverflow.com
+-- www.wikipedia.org
+-- www.amilevin.com
+
+-- END

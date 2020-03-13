@@ -1,0 +1,15 @@
+c:\users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\FactoryFloor\bin\Debug\FactoryFloor.dll
+c:\users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\FactoryFloor\bin\Debug\FactoryFloor.pdb
+c:\users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\FactoryFloor\bin\Debug\Newtonsoft.Json.dll
+c:\users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\FactoryFloor\bin\Debug\Newtonsoft.Json.xml
+c:\users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\FactoryFloor\obj\Debug\FactoryFloor.csprojResolveAssemblyReference.cache
+c:\users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\FactoryFloor\obj\Debug\FactoryFloor.dll
+c:\users\warneradmin\documents\visual studio 2015\Projects\CosmosDemo\FactoryFloor\obj\Debug\FactoryFloor.pdb
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\bin\Debug\FactoryFloor.dll
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\bin\Debug\FactoryFloor.pdb
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\obj\Debug\FactoryFloor.csprojResolveAssemblyReference.cache
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\obj\Debug\FactoryFloor.csproj.CoreCompileInputs.cache
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\obj\Debug\FactoryFloor.dll
+C:\Users\warneradmin\source\repos\MachineTemperature\FactoryFloor\obj\Debug\FactoryFloor.pdb
