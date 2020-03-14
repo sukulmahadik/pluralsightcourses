@@ -1,0 +1,61 @@
+Module 2: Developing Batch Processing Solutions with Azure SQL Data Warehouse
+
+Microsoft Azure
+https://azure.microsoft.com/en-us/
+
+Azure Documentation
+https://docs.microsoft.com/en-us/azure/
+
+Azure SQL Data Warehouse: First Look | Pluralsight
+https://www.pluralsight.com/courses/azure-sql-data-warehouse-first-look
+
+Drift Messenger
+https://js.driftt.com/deploy/assets/index.html
+
+Infographic: The Four V's of Big Data | IBM Big Data & Analytics Hub
+https://www.ibmbigdatahub.com/infographic/four-vs-big-data
+
+Structured vs. Unstructured Data
+https://www.datamation.com/big-data/structured-vs-unstructured-data.html
+
+Azure Data Lake Storage Gen2 Introduction | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction
+
+Azure Data Lake Storage Gen2 Introduction | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction
+
+Azure Storage Explorer – cloud storage management | Microsoft Azure
+https://azure.microsoft.com/en-us/features/storage-explorer/
+
+Azure SQL Data Warehouse Documentation - Tutorials, Concepts | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/sql-data-warehouse/
+
+Data Warehouse Units (DWUs, cDWUs) in Azure SQL Data Warehouse | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu
+
+Download SQL Server Management Studio (SSMS) - SQL Server | Microsoft Docs
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017
+
+The Azure Blob Filesystem driver for Azure Data Lake Storage Gen2 | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-abfs-driver
+
+Tutorial: Load New York Taxicab data to Azure SQL Data Warehouse | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase
+
+Azure Analysis Services Documentation - Tutorials, API Reference | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/analysis-services/
+
+Azure and Power BI - Power BI | Microsoft Docs
+https://docs.microsoft.com/en-us/power-bi/service-azure-and-power-bi
+
+Azure Data Factory Documentation - Tutorials, API Reference | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/data-factory/
+
+Integration runtime in Azure Data Factory | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime
+
+Copy Activity in Azure Data Factory | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/data-factory/copy-activity-overview
+
+Managed identities for Azure resources | Microsoft Docs
+https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
