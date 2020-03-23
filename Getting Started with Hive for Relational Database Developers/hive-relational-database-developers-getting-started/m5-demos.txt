@@ -1,0 +1,158 @@
+Hive
+————
+
+load data local inpath 'products.csv'
+overwrite into table products;
+
+select * from products
+union
+select * from freshproducts;
+(Schema from both sides should match)
+
+
+select * from products
+union
+select id, title, cost from freshproducts;
+
+insert into freshproducts 
+values ("iphone7", " iPhone 7", 950, 1234567890);
+
+select * from products 
+union 
+select id, title, cost from freshproducts;
+
+(No dupes)
+
+select * from products 
+union all
+select id, title, cost from freshproducts;
+
+(Dupes preserved)
+
+
+select * from products 
+minus
+select id, title, cost from freshproducts;
+
+select * from products 
+intersect
+select id, title, cost from freshproducts;
+
+
+select *
+from (
+select id as product_id from products 
+union 
+select id as product_id from freshproducts
+) t;
+
+
+select distinct(t.product_id) from
+(
+select product_id from
+customers join orders
+where customers.id = orders.customer_id
+) t;
+
+
+select id from customers
+where id in (1111, 3333, 5555);
+
+select name from customers
+where id in (1111, 3333, 5555);
+
+select id from customers
+where id not in (1111, 3333, 5555);
+
+
+select name from customers
+where 
+id in 
+(select customer_id from orders);
+
+select id, title from products
+where 
+id not in 
+(select product_id from orders);
+
+select id from customers
+where exists
+(
+select customer_id from orders
+);
+
+(This is not allowed)
+
+select id from customers
+where exists
+(
+select customer_id from orders
+where orders.customer_id = customers.id
+);
+
+(Subqueries in where should have at least one correlated predicate)
+
+
+select id from 
+(
+select id from customers
+) c
+where exists
+(
+select customer_id from orders
+where orders.customer_id = c.id
+);
+
+create table allproducts 
+(
+id string,
+name string,
+cost float
+)
+as
+select id, title as name, cost from products;
+(Will not work)
+
+create table allproducts
+as
+select id, title as name, cost from products;
+(This will work)
+
+Views
+
+create view customer_purchases
+as
+select customer_id, product_id, address
+from customers join orders
+where customers.id = orders.customer_id;
+
+show tables;
+
+describe customer_purchases;
+
+describe formatted customer_purchases;
+(query is part of the view's metadata)
+
+insert into customer_purchases values (9999, "phone", "CT");
+(Views are read only, Not allowed, insert/load/alter will fail)
+
+
+select distinct(customer_id) from customer_purchases;
+
+
+create view product_purchases
+as
+select product_id, quantity
+from orders;
+
+
+show tables;
+
+describe product_purchases;
+
+alter view product_purchases
+as
+select product_id, quantity, amount
+from orders;
+
+describe product_purchases;

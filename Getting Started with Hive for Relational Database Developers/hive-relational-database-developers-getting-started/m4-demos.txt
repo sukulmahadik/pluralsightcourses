@@ -1,0 +1,182 @@
+Hive
+—————
+
+Arrays
+
+Create a table with array data types
+
+create table mobilephones (
+id string,
+title string,
+cost float,
+colors array<string>,
+screen_size array<float>
+);
+
+insert into table mobilephones
+select "redminote7", "Redmi Note 7", 300, 
+array("white", "silver", "black"), array(float(4.5))
+UNION ALL
+select "motoGplus", "Moto G Plus", 200, array("black", "gold"), 
+array(float(4.5), float(5.5));
+
+(This causes an error because of CBO)
+
+
+select * from mobilephones;
+
+select id, colors from mobilephones;
+
+select id, colors[0] from mobilephones;
+
+
+create table mobilephones (
+id string,
+title string,
+cost float,
+colors array<string>,
+screen_size array<float>
+)
+row format delimited fields terminated by ','
+collection items terminated by '#';
+
+load data local inpath 'mobilephones.csv'
+into table mobilephones;
+
+
+Map
+
+create table mobilephones (
+id string,
+title string,
+cost float,
+colors array<string>,
+screen_size array<float>,
+features map<string, boolean>
+)
+row format delimited fields terminated by ','
+collection items terminated by '#'
+map keys terminated by ':';
+
+Edit the file to add features
+
+load data local inpath 'mobilephones.csv'
+into table mobilephones;
+
+
+select id, features[' camera'] from mobilephones;
+
+
+Struct
+
+create table mobilephones (
+id string,
+title string,
+cost float,
+colors array<string>,
+screen_size array<float>,
+features map<string, boolean>,
+information struct<battery:string,camera:string>
+)
+row format delimited fields terminated by ','
+collection items terminated by '#'
+map keys terminated by ':';
+
+
+Edit the file to add information
+
+load data local inpath 'mobilephones.csv'
+into table mobilephones;
+
+select id, features, information 
+from mobilephones;
+select id, features['camera'], information.battery 
+from mobilephones;
+select id, features['camera'] as CameraPresent, information.battery 
+from mobilephones;
+
+
+Turn off CBO: Set hive.cbo.enable to false in hive-site.xml
+
+
+select explode(colors) as variants from mobilephones;
+(You want to display all the mobile phone colors as a filter)
+
+select explode(features) as (feature, present) 
+from mobilephones where id = "samsungj7";
+(You want the feature list for a particular phone)
+
+select posexplode(colors) as (index, variants) from mobilephones;
+
+select id, explode(colors) as variants from mobilephones;
+
+select id, variants
+from mobilephones
+lateral view explode(colors) colorsTable as variants;
+
+select id, feature, present
+from mobilephones
+lateral view explode(features) featuresTable as feature, present;
+
+
+create table ads
+(
+page_id string,
+ad_list array<string>
+)
+row format delimited fields terminated by ','
+collection items terminated by '#';
+
+load data local inpath 'ads.csv'
+into table ads;
+
+select page_id, ad_id
+from ads
+lateral view explode(ad_list) adListTable as ad_id;
+
+select ad_id
+from ads
+lateral view explode(ad_list) adListTable as ad_id
+
+select ad_id, count(*)
+from ads
+lateral view explode(ad_list) adListTable as ad_id
+group by ad_id;
+
+
+create table student_subjects
+(
+names array<string>,
+subjects array<string>
+)
+row format delimited fields terminated by ','
+collection items terminated by '#';
+
+load data local inpath 'student_subjects.csv'
+into table student_subjects;
+
+select n, subjects
+from student_subjects
+lateral view explode(names) nameTable as n;
+
+select n, s
+from student_subjects
+lateral view explode(names) nameTable as n
+lateral view explode(subjects) subjectTable as s;
+
+
+create table example
+(
+double_nested array<array<int>>
+);
+
+insert into table example
+select array(array(1, 2, 3), array(4, 5, 6), array(7, 8, 9));
+
+select * from example
+lateral view explode(double_nested) nestedTable as single_nested
+lateral view explode(single_nested) flatTable as num;
+
+select num from example
+lateral view explode(double_nested) nestedTable as single_nested
+lateral view explode(single_nested) flatTable as num;

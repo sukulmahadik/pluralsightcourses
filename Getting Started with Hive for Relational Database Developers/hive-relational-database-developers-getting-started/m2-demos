@@ -1,0 +1,110 @@
+Hive
+————
+
+create database pluralsight;
+use pluralsight;
+
+create table customers (
+id bigint,
+name string,
+address string
+);
+
+show tables;
+describe customers;
+
+insert into customers values (
+1111, "John", "WA"
+);
+
+insert into customers values (
+2222, "Emily", "WA"
+), (
+3333, "Rick", "WA"
+), (
+4444, "Jane", "CA"
+), (
+5555, "Amit", "NJ"
+), (
+6666, "Nina", "NY"
+);
+
+select * from customers where address = "WA";
+
+select name, address from customers where address = "CA";
+
+select name, address from customers where address = "WA" and id > 2222;
+
+select DISTINCT address from customers;
+
+select name, address from customers order by address;
+
+select count(*) from customers;
+
+select address, count(*) from customers group by address;
+
+select address, count(*) as customer_count from customers group by address;
+
+select * from customers limit 1;
+
+
+Terminal
+————————
+
+bin/beeline -u jdbc:hive2:// -e "select * from customers"
+
+inside beeline source test.hql
+select * from customers;
+
+bin/beeline -u jdbc:hive2:// -f test.hql 
+
+
+Hive
+————
+
+create table if not exists orders (
+id bigint, 
+product_id string, 
+customer_id bigint, 
+quantity int, 
+amount double
+);
+
+insert into orders values (
+111111,
+"phone",
+1111,
+3,
+1200
+);
+
+insert into orders values (
+111112, 
+"camera", 
+1111, 
+1, 
+5200
+), (
+111113, 
+"broom", 
+1111, 
+1, 
+10
+), (
+111114,
+"broom",
+2222,
+2,
+20
+), (
+111115,
+"t-shirt",
+4444,
+2,
+66
+);
+
+
+select customers.id, name, product_id 
+from customers join orders 
+where customers.id = orders.customer_id; 
