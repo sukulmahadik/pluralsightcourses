@@ -1,0 +1,31 @@
+Resources for Query Data Using Azure Stream Analytics
+=====================================================
+
+Introducing Stream Analytics Query Language, the Analytics Query Language
+-------------------------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-stream-analytics-query-patterns
+https://docs.microsoft.com/en-us/stream-analytics-query/data-types-azure-stream-analytics
+https://docs.microsoft.com/en-us/stream-analytics-query/query-language-elements-azure-stream-analytics
+https://docs.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference
+https://docs.microsoft.com/en-us/stream-analytics-query/built-in-functions-azure-stream-analytics
+
+
+Arrival Time Vs Application Time and TIMESTAMP BY command
+--------------------------------------------------------- 
+https://docs.microsoft.com/en-us/stream-analytics-query/timestamp-by-azure-stream-analytics
+https://docs.microsoft.com/en-us/stream-analytics-query/time-management-azure-stream-analytics
+
+
+Configuring event ordering policies
+-----------------------------------
+https://docs.microsoft.com/en-us/azure/stream-analytics/event-ordering
+https://docs.microsoft.com/en-us/stream-analytics-query/time-skew-policies-azure-stream-analytics
+
+
+Other resources
+---------------
+https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-time-handling
+https://docs.microsoft.com/en-us/stream-analytics-query/time-skew-policies-azure-stream-analytics
+https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-troubleshoot-query
+https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-job-diagnostic-logs
+https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-sql-output-perf

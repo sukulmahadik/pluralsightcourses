@@ -1,0 +1,23 @@
+IF NOT EXISTS (SELECT * FROM sys.sql_logins WHERE name = 'PrimeUSer')
+BEGIN
+CREATE LOGIN [PrimeUSer] WITH PASSWORD='<This!s@StrongPW>'
+END
+;
+
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = 'PrimeUSer')
+BEGIN
+CREATE USER [PrimeUSer] FOR LOGIN [PrimeUSer]
+END
+;
+
+DROP WORKLOAD CLASSIFIER [wgcPrimeUSer];
+CREATE WORKLOAD CLASSIFIER [wgcPrimeUSer]
+WITH (WORKLOAD_GROUP = 'xlargerc'
+      ,MEMBERNAME = 'PrimeUSer'
+      ,IMPORTANCE = HIGH);
+
+SELECT * FROM sys.workload_management_workload_classifiers
+
+DROP WORKLOAD CLASSIFIER [wgcPrimeUSer]
+DROP USER [PrimeUSer]
+;

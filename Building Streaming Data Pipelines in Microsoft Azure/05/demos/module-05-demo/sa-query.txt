@@ -1,0 +1,5 @@
+SELECT CAST(AVG(hd.TempratureCelcius) AS bigint) AS Temp
+, hd.SensorId, System.Timestamp() AS t
+INTO sqloutput
+FROM HeatData hd
+GROUP BY TumblingWindow(second, 5), hd.SensorId
