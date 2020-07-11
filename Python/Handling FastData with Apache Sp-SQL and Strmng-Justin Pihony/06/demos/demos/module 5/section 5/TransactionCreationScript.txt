@@ -1,0 +1,1 @@
+CREATE TABLE finances.transactions (id bigint, account_number text, amount double, date date, description text, PRIMARY KEY(id));
